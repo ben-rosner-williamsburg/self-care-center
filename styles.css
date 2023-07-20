@@ -3,68 +3,69 @@ body {
     font-family: 'Quicksand', sans-serif;
     color: #ffffff;
     height: 680px;
+    display: flex;
+    flex-direction: column;
 }
 
 .self-care-center-container {
-    display: flex;
-    justify-content: center;
-    margin: 50px;
+    margin: 0px auto;
 }
 
 .message-type-container {
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
+    margin: 10px auto;
+    height: 35px;
 }
 
 .form-container {
     display: flex;
-    margin: 0 auto;
     background-color: #ffffff;
     flex-direction: column;
-    width: 500px;
+    width: 460px;
     height: 100px;
     border-radius: 10px;
-    margin: 5px auto;
+    margin: 10px auto;
 }
 
 .img-container {
     display: flex;
-    margin: 20px 10px;
     background-color: #ffffff;
     flex-direction: column;
-    width: 800px;
+    width: 700px;
     height: 200px;
     border-radius: 10px;
-    margin: 80px auto;
     align-items: center;
+    margin: 40px auto;
 }
 
 .select-form {
-    margin: 0px auto;
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
-.select-form >label {
-    margin: 20px;
+.radio-container {
+    display: flex;
     font-style: italic;
     color: #000000;
-    width: 100px;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 550px;
+    height: 50px;
 }
-
 
 .btn-container {
-    margin: 0 auto -10px 20px;
-    padding: 20px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin: 20px auto;
 }
+
 
 .btn {
     background-color: #134d71;
     color: #ffffff;
     font-weight: 450;
     width: 180px;
-    margin: 0 auto;
-    padding: 5px;
+    height: 25px;
     border: none;
     letter-spacing: .8px;
     font-size: 14px;
@@ -75,4 +76,8 @@ body {
 img {
     width: 80px;
     height: 200px;
+}
+
+label {
+    margin: 0 100px 0 -30px;
 }
