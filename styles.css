@@ -1,17 +1,18 @@
 body {
     background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
     font-family: 'Quicksand', sans-serif;
-    color: #ffffff;
     height: 680px;
     display: flex;
     flex-direction: column;
 }
 
 .self-care-center-container {
+    color: #ffffff;
     margin: 0px auto;
 }
 
 .message-type-container {
+    color: #ffffff;
     margin: 10px auto;
     height: 35px;
 }
@@ -33,8 +34,9 @@ body {
     width: 700px;
     height: 200px;
     border-radius: 10px;
-    align-items: center;
     margin: 40px auto;
+    justify-content: center;
+    align-items: center;
 }
 
 .select-form {
@@ -80,4 +82,19 @@ img {
 
 label {
     margin: 0 100px 0 -30px;
+}
+
+.hidden {
+    display: none;
+}
+
+.message {
+    color: #000000;
+    font-weight: 450;
+    width: 700px;
+    height: 25px;
+    letter-spacing: .8px;
+    font-size: 22px;
+    font-family: "Quicksand", sans-serif;
+    text-align: center;
 }
