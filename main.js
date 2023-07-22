@@ -31,3 +31,31 @@ var mantras = [
     "Onward and upward.",
     "I am the sky, the rest is weather."
 ]
+var receiveMessageBtn = document.querySelector(".btn");
+var affirmationRadioButton = document.querySelector("#affirmation");
+var mantraRadioButton = document.querySelector("#mantra");
+var imageContainer = document.querySelector(".img-container");
+var form = document.querySelector(".select-form");
+
+receiveMessageBtn.addEventListener("click", function(event){
+  event.preventDefault();
+  receiveMessage(affirmations);
+})
+
+
+function receiveMessage(selfCareArr){
+      if (affirmationRadioButton.checked || mantraRadioButton.checked) {
+        var randomAdviceIndex = randomIndex(selfCareArr)
+          console.log(selfCareArr[randomAdviceIndex])
+      }
+      return selfCareArr[randomAdviceIndex]
+  }
+
+
+
+function randomIndex(selfCareArr){
+   var index = Math.floor(Math.random() * selfCareArr.length)
+   return index
+}
+
+
