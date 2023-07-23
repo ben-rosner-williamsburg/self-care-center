@@ -1,22 +1,31 @@
 # Self-Care Center 
 
 ### Abstract:
-[//]: <> (Briefly describe what you built and its features. What problem is the app solving? How does this application solve that problem?)
+This is an app that displays either an affirmation or mantra, depending on the user's selection. It is a motivational app that helps people when they need self-care.
 
 ### Installation Instructions:
-[//]: <> (What steps does a person have to take to get your app cloned down and running?)
+1. Clone down the Self Care Center repositry from GitHub.
+2. Run `open index.html` from your computer's Terminal application inside the repository.
 
 ### Preview of App:
-[//]: <> (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off.)
+![Preview GIF of Self Care Center App](Self_Care_Center_Example.gif)
 
 ### Context:
-[//]: <> (Give some context for the project here. How long did you have to work on it? How far into the Turing program are you?)
+This is my Mod 1 Solo Challenge for my time at Turing School for Software and Design. I had one week to work on it, and was able to implement
+the error handling and clear form functionality.
 
 ### Contributors:
-[//]: <> (Who worked on this application? Link to their GitHubs.)
+- Ben Rosner [Link to GitHub](https://github.com/ben-rosner-williamsburg)
 
 ### Learning Goals:
-[//]: <> (What were the learning goals of this project? What tech did you work with?)
+- Gain experience building an application that utilizes HTML, CSS and JavaScript
+- Write HTML and CSS to match a provided comp
+- Understand how to listen to and respond to user events
+- Individualize your programming skill set
 
 ### Wins + Challenges:
-[//]: <> (What are 2-3 wins you have from this project? What were some challenges you faced - and how did you get over them?)
+- Win: Coding an entire project in HTML, CSS and JavaScript by myself!
+- Challenge: Figuring out how to add the image back to the image container once the Clear Form button is pressed.
+- Win: Figuring out how to position elements with flexbox, which in the past has been a big challenge. Scott's lesson
+really helped with this.
+- Win: Feeling more confident about my code than I ever have before.
