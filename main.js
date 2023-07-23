@@ -100,7 +100,10 @@ function appendImg(image, container) {
   container.appendChild(image)
 }
 
+<<<<<<< HEAD
 function uncheckRadioButtons(radioButtonOne, radioButtonTwo) {
   radioButtonOne.checked = false;
   radioButtonTwo.checked = false;
 }
+=======
+>>>>>>> main

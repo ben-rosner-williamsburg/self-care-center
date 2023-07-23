@@ -1,33 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <header class="self-care-center-container">
-      <h1 class="self-care-center-title">✨ Self Care Center ✨</h1>
-    </header>
-    <main class="message-type-container">
-      <h3 class="message-type-text">Which type of message?</h3>
-    </main>
-      <section class="form-container">
-        <form class="select-form">
-          <article class="radio-container">
-            <input type="radio" id="affirmation" name="select-type" value="affirmation" />
-            <label for="affirmation">affirmation</label>
-            <input type="radio" id="mantra" name="select-type" value="mantra" />
-            <label for="mantra">mantra</label>
-          </article>
-         <article class="btn-container">
-          <input type="submit" value="Receive Message" class="btn" />
-        </article>
-        </form>
-      </section>
-    <section class="img-container">
-      <img src="assets/meditate.svg"
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="self-care-center-container">
+    <h1 class="self-care-center-title">✨ Self Care Center ✨</h1>
+  </header>
+  <main class="message-type-container">
+    <h3 class="message-type-text">Which type of message?</h3>
+  </main>
+  <section class="form-container">
+    <form class="select-form">
+      <article class="radio-container">
+        <input type="radio" id="affirmation" name="select-type" value="affirmation" required/>
+        <label for="affirmation">affirmation</label>
+        <input type="radio" id="mantra" name="select-type" value="mantra" required/>
+        <label for="mantra">mantra</label>
+      </article>
+      <article class="btn-container">
+        <button type="submit" value="Receive Message" class="btn">Receive Message</button>
+        <button type="reset" value="Clear" class="reset-btn hidden">Clear Form</button>
+      </article>
+    </form>
+  </section>
+  <section class="img-container">
+    <img src="assets/meditate.svg"
       alt="yellow logo of person meditating with pinkish-yellow circles echoing from their head" id="mediation-img" />
-    </section>
-    <script type="text/javascript" src="main.js"></script>
-  </body>
+  </section>
+  <script type="text/javascript" src="main.js"></script>
+</body>
+
 </html>
