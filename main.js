@@ -37,20 +37,26 @@ var mantraRadioButton = document.querySelector("#mantra");
 var imageContainer = document.querySelector(".img-container");
 var form = document.querySelector(".select-form");
 var meditationImage = document.querySelector("img");
+var clearButton = document.querySelector(".reset-btn")
 
-receiveMessageBtn.addEventListener("click", function (event) {
-  var message;
-  event.preventDefault();
+receiveMessageBtn.addEventListener("click", function(event, message) {
   if (affirmationRadioButton.checked) {
+    event.preventDefault();
     message = receiveMessage(affirmations);
+    toggleImg(meditationImage);
+    displayMessage(message, imageContainer);
+    toggleBtn(clearButton);
+    toggleBtn(receiveMessageBtn);
   }
   else if (mantraRadioButton.checked) {
+    event.preventDefault();
     message = receiveMessage(mantras);
+    toggleImg(meditationImage);
+    displayMessage(message, imageContainer);
+    toggleBtn(clearButton);
+    toggleBtn(receiveMessageBtn);
   }
-  toggleImg(meditationImage);
-  displayMessage(message, imageContainer);
 })
-
 function receiveMessage(selfCareArr) {
   if (affirmationRadioButton.checked || mantraRadioButton.checked) {
     var randomAdviceIndex = randomIndex(selfCareArr);
@@ -65,6 +71,10 @@ function randomIndex(selfCareArr) {
 
 function toggleImg(image) {
   image.classList.toggle("hidden");
+}
+
+function toggleBtn(button) {
+  button.classList.toggle("hidden")
 }
 
 function displayMessage(message, container) {
