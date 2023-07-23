@@ -39,32 +39,34 @@ var form = document.querySelector(".select-form");
 var meditationImage = document.querySelector("img");
 var clearBtn = document.querySelector(".reset-btn")
 
-  receiveMessageBtn.addEventListener("click", function(event, message) {
-    if (affirmationRadioButton.checked) {
-      event.preventDefault();
-      message = receiveMessage(affirmations);
-      toggleImg(meditationImage);
-      displayMessage(message, imageContainer);
-      toggleBtn(clearBtn);
-      toggleBtn(receiveMessageBtn);
+receiveMessageBtn.addEventListener("click", function (event, message) {
+  if (affirmationRadioButton.checked) {
+    event.preventDefault();
+    message = receiveMessage(affirmations);
+    toggleImg(meditationImage);
+    displayMessage(message, imageContainer);
+    toggleBtn(clearBtn);
+    toggleBtn(receiveMessageBtn);
   }
-    else if (mantraRadioButton.checked) {
-      event.preventDefault();
-      message = receiveMessage(mantras);
-      toggleImg(meditationImage);
-      displayMessage(message, imageContainer);
-      toggleBtn(clearBtn);
-      toggleBtn(receiveMessageBtn);
+  else if (mantraRadioButton.checked) {
+    event.preventDefault();
+    message = receiveMessage(mantras);
+    toggleImg(meditationImage);
+    displayMessage(message, imageContainer);
+    toggleBtn(clearBtn);
+    toggleBtn(receiveMessageBtn);
   }
 })
-  clearBtn.addEventListener("click", function(event) {
-    event.preventDefault();
-    removeMessage(imageContainer);
-    toggleImg(meditationImage);
-    appendImg(meditationImage, imageContainer);
-    toggleBtn(receiveMessageBtn);
-    toggleBtn(clearBtn);
-  })
+clearBtn.addEventListener("click", function (event) {
+  event.preventDefault();
+  uncheckRadioButtons(affirmationRadioButton, mantraRadioButton);
+  removeMessage(imageContainer);
+  toggleImg(meditationImage);
+  appendImg(meditationImage, imageContainer);
+  toggleBtn(receiveMessageBtn);
+  toggleBtn(clearBtn);
+
+})
 
 function receiveMessage(selfCareArr) {
   if (affirmationRadioButton.checked || mantraRadioButton.checked) {
@@ -98,3 +100,10 @@ function appendImg(image, container) {
   container.appendChild(image)
 }
 
+<<<<<<< HEAD
+function uncheckRadioButtons(radioButtonOne, radioButtonTwo) {
+  radioButtonOne.checked = false;
+  radioButtonTwo.checked = false;
+}
+=======
+>>>>>>> main
