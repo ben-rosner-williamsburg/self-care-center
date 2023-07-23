@@ -37,26 +37,35 @@ var mantraRadioButton = document.querySelector("#mantra");
 var imageContainer = document.querySelector(".img-container");
 var form = document.querySelector(".select-form");
 var meditationImage = document.querySelector("img");
-var clearButton = document.querySelector(".reset-btn")
+var clearBtn = document.querySelector(".reset-btn")
 
-receiveMessageBtn.addEventListener("click", function(event, message) {
-  if (affirmationRadioButton.checked) {
-    event.preventDefault();
-    message = receiveMessage(affirmations);
-    toggleImg(meditationImage);
-    displayMessage(message, imageContainer);
-    toggleBtn(clearButton);
-    toggleBtn(receiveMessageBtn);
+  receiveMessageBtn.addEventListener("click", function(event, message) {
+    if (affirmationRadioButton.checked) {
+      event.preventDefault();
+      message = receiveMessage(affirmations);
+      toggleImg(meditationImage);
+      displayMessage(message, imageContainer);
+      toggleBtn(clearBtn);
+      toggleBtn(receiveMessageBtn);
   }
-  else if (mantraRadioButton.checked) {
-    event.preventDefault();
-    message = receiveMessage(mantras);
-    toggleImg(meditationImage);
-    displayMessage(message, imageContainer);
-    toggleBtn(clearButton);
-    toggleBtn(receiveMessageBtn);
+    else if (mantraRadioButton.checked) {
+      event.preventDefault();
+      message = receiveMessage(mantras);
+      toggleImg(meditationImage);
+      displayMessage(message, imageContainer);
+      toggleBtn(clearBtn);
+      toggleBtn(receiveMessageBtn);
   }
 })
+  clearBtn.addEventListener("click", function(event) {
+    event.preventDefault();
+    removeMessage(imageContainer);
+    toggleImg(meditationImage);
+    appendImg(meditationImage, imageContainer);
+    toggleBtn(receiveMessageBtn);
+    toggleBtn(clearBtn);
+  })
+
 function receiveMessage(selfCareArr) {
   if (affirmationRadioButton.checked || mantraRadioButton.checked) {
     var randomAdviceIndex = randomIndex(selfCareArr);
@@ -74,10 +83,18 @@ function toggleImg(image) {
 }
 
 function toggleBtn(button) {
-  button.classList.toggle("hidden")
+  button.classList.toggle("hidden");
 }
 
 function displayMessage(message, container) {
-  container.innerHTML += ""
   container.innerHTML = `<h1 class="message">${message}</h1>`
 }
+
+function removeMessage(container) {
+  container.innerHTML = ""
+}
+
+function appendImg(image, container) {
+  container.appendChild(image)
+}
+

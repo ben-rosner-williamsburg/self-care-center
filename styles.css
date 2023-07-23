@@ -76,17 +76,14 @@ body {
     margin: 0px 5px;
 }
 
-img {
+img, .visible{
+    display: block;
     width: 80px;
     height: 200px;
 }
 
 label {
     margin: 0 100px 0 -30px;
-}
-
-.hidden {
-    display: none;
 }
 
 .message {
@@ -98,4 +95,8 @@ label {
     font-size: 22px;
     font-family: "Quicksand", sans-serif;
     text-align: center;
+}
+
+.hidden {
+    display: none;
 }
