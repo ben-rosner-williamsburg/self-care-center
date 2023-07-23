@@ -54,7 +54,6 @@ receiveMessageBtn.addEventListener("click", function (event) {
 function receiveMessage(selfCareArr) {
   if (affirmationRadioButton.checked || mantraRadioButton.checked) {
     var randomAdviceIndex = randomIndex(selfCareArr);
-    console.log(selfCareArr[randomAdviceIndex]);
   }
   return selfCareArr[randomAdviceIndex];
 }
@@ -72,5 +71,3 @@ function displayMessage(message, container) {
   container.innerHTML += ""
   container.innerHTML = `<h1 class="message">${message}</h1>`
 }
-
-
