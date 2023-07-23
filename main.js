@@ -37,7 +37,7 @@ var mantraRadioButton = document.querySelector("#mantra");
 var imageContainer = document.querySelector(".img-container");
 var form = document.querySelector(".select-form");
 var meditationImage = document.querySelector("img");
-var clearBtn = document.querySelector(".reset-btn")
+var clearBtn = document.querySelector(".reset-btn");
 
 receiveMessageBtn.addEventListener("click", function (event, message) {
   if (affirmationRadioButton.checked) {
@@ -65,7 +65,6 @@ clearBtn.addEventListener("click", function (event) {
   appendImg(meditationImage, imageContainer);
   toggleBtn(receiveMessageBtn);
   toggleBtn(clearBtn);
-
 })
 
 function receiveMessage(selfCareArr) {
@@ -89,15 +88,15 @@ function toggleBtn(button) {
 }
 
 function displayMessage(message, container) {
-  container.innerHTML = `<h1 class="message">${message}</h1>`
+  container.innerHTML = `<h1 class="message">${message}</h1>`;
 }
 
 function removeMessage(container) {
-  container.innerHTML = ""
+  container.innerHTML = "";
 }
 
 function appendImg(image, container) {
-  container.appendChild(image)
+  container.appendChild(image);
 }
 
 function uncheckRadioButtons(radioButtonOne, radioButtonTwo) {
